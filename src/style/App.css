@@ -1,42 +1,208 @@
-* {
-    background: #d5ebde;
-    font-family: sans-serif;
+body {
+  background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-  #block {
+  /*Header - includes the button for the favorites and the logo - This might have to be in the Header.css file if we make it*/
+
+  #logo {
+    max-width: 350px;
     position: relative;
-    border: black;
-    bottom: 50px;
-    margin: 1rem;  
-  }
+    top: 20px;
+    }
 
   #myfavorites {
     position: relative;
     left: 1000px;
     width: 40px;
     height: 40px;
+    top: -20px;
   }
 
 
+/*
 h1 {
     color: blue;    
     }
+*/
 
+/*Button - main - these are for the buttons in the nav - Might have to be in the nav.css*/
 button {
-    border-radius: 13px;
-    background: #e0e0e0;
-    box-shadow:  6px 6px 11px #d0d0d0,
-             -6px -6px 11px #f0f0f0;
+    margin-left: 15px;
+    width: 7em;
+    height: 2em;
+    border-radius: 30em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+box-shadow:  -4px -4px 22px #d9d9d9,
+             4px 4px 22px #ffffff;
     color: white;
-    padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
     cursor: pointer;
+    margin: 10px;
 }
 
+button::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1C75BC;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ button:hover::before {
+  width: 9em;
+ }
+
 button:hover{
-    border-radius: 13px;
+    border-radius: 30em;
     background: #e0e0e0;
-    box-shadow: inset 6px 6px 11px #d0d0d0,
-            inset -6px -6px 11px #f0f0f0;
+    box-shadow: inset 4px 4px 11px #d0d0d0,
+            inset -4px -4px 11px #f0f0f0;
+    color: white;
+}
+
+/* Jobs Container - both the filter and the jobs container is in here - We most likely have to make a new css fille (one for both of them and the link that sheet to both js files */
+
+#filtered {
+  display: inline-block;
+  width: 600px;
+  height: 500px;
+  position: relative;
+  left: 35px;
+  top: 120px;
+  margin-left: 20px;
+  border-radius: 42px;
+  background: rgb(237,237,237);
+  background: linear-gradient(315deg, #e6e6e6, #ffffff);
+  box-shadow:  -11px -11px 22px #d9d9d9,
+               11px 11px 22px #ffffff;
+}
+
+h5 {
+  position: relative;
+  top: 15px;
+  left: 25px;
+}
+#jobs {
+  display: inline-block;
+  margin-left: 40px;
+  width: 700px;
+  height: 500px;
+  position: relative;
+  left: 20px;
+  bottom: 82px;
+  border-radius: 42px;
+  background: linear-gradient(315deg, #e6e6e6, #ffffff);
+box-shadow:  -11px -11px 22px #d9d9d9,
+             11px 11px 22px #ffffff;
+}
+
+.container input {
+  position: absolute;
+  opacity: 1;
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  box-shadow: -1px -1px 8px rgba(255,255,255,0.5),
+  2px 2px 8px rgba(0,0,70,0.12);
+  border-radius: 50%;
+  border: 8px solid #ececec;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  top: 50px;
+  right: 20px;
+  justify-content: right;
+  align-items: center;
+}
+
+.container input::after {
+  transition: .5s;
+  font-family: monospace;
+  content: '';
+  color: #7a7a7a;
+  font-size: 25px;
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #7a7a7a;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.container input:checked {
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(70,70,70,0.12),
+  inset -10px -10px 15px rgba(255,255,255,0.5),
+  inset 10px 10px 15px rgba(70,70,70,0.12);
+  transition: .5s;
+}
+
+.container input:checked::after {
+  transition: .5s;
+  border: solid #15e38a;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+#searchName {
+ border: none;
+  margin-left: 10px;
+  margin-bottom: 15px;
+ padding: 10px;
+ width: 300px;
+ border-radius: 1rem;
+ background: linear-gradient(315deg, #e6e6e6, #ffffff);
+box-shadow:  -6px -6px 22px #d9d9d9,
+             6px 6px 22px #ffffff;
+ transition: 0.3s;
+}
+
+.input:focus {
+ outline-color: #ededed;
+ background: linear-gradient(315deg, #ededed, #d5d5d5);
+box-shadow:  -4px -4px 35px #b5c8bd,
+             4px 4px 35px #f5ffff;
+ transition: 0.3s;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+}
+
+/*Filtered Jobs*/
+
+.ruby-jobs {
+  border-radius: 30px;
+  margin: 0 auto;
+  background: white;
+  width: 500px;
+  height: 200px;
+}
+
+p {
+  position: relative;
+  max-width: 450px;
+  left: 25px;
+  top: 10px;
 }

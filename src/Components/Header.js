@@ -8,8 +8,11 @@ function Header (){
  
     return(
         <div id="header"> 
-            <img src={bIndeed_logo} alt="bIndeed Logo" />
-            <FontAwesomeIcon icon="fa-solid fa-floppy-disk" />        </div>
+            <img src={bIndeed_logo} alt="bIndeed Logo" id="logo"/>
+          {/*  <FontAwesomeIcon icon="fa-solid fa-floppy-disk" /> */}   
+          <button id="myfavorites"><span class="fa fa-star"></span></button>
+
+         </div>
     )
 
 } 

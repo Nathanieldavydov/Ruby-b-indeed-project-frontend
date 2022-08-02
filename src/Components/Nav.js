@@ -19,10 +19,11 @@ function Nav ({setSearch, search}){
  
     return(
        <div id="nav"> 
-            <input type="text" id="searchName" placeholder="Find jobs..." onChange={handleStyleChange}/>
-
+       <h3>Search for Jobs</h3>
+            <input type="text" id="searchName" placeholder="Job title, keywords, or company" onChange={handleStyleChange}/>
+        <div id="nav-buttons">
             <div className="dropdown">
-                <button id="city" className="dropbtn" onChange={handleStyleChange}>CITY</button>
+                <button id="city" className="dropbtn" onChange={handleStyleChange}>City</button>
                 <div id="myDropdown" className="dropdown-content" >
                     <a>Atlanta</a>
                     <a>Boston</a>
@@ -45,9 +46,10 @@ function Nav ({setSearch, search}){
             </div>
 
             <div className="dropdown">
-                <button id="languages" className="dropbtn" onChange={handleStyleChange}>LANGUAGES</button>
+                <button id="languages" className="dropbtn" onChange={handleStyleChange}>Languages</button>
                 <div id="myDropdown" className="dropdown-content" >
                     <a>C#</a>
+                    <a>C++</a>
                     <a>Python</a>
                     <a>React</a>
                     <a>SQL</a>
@@ -58,7 +60,7 @@ function Nav ({setSearch, search}){
             </div>
 
             <div className="dropdown">
-                <button id="company" className="dropbtn" onChange={handleStyleChange}>COMPANY</button>
+                <button id="company" className="dropbtn" onChange={handleStyleChange}>Company</button>
                 <div id="myDropdown" className="dropdown-content" >
                     <a>Amazon</a>
                     <a>Apple</a>
@@ -72,17 +74,18 @@ function Nav ({setSearch, search}){
             </div>
 
             <div className="dropdown">
-                <button id="salary" className="dropbtn" onChange={handleStyleChange}>SALARY</button>
+                <button id="salary" className="dropbtn" onChange={handleStyleChange}>Salary</button>
                 <div id="myDropdown" className="dropdown-content" >
-                    <a>0 - 75,000</a>
-                    <a>75,000 - 90,000</a>
-                    <a>90,000 - 100,000</a>
-                    <a>100,000 - 200,000</a>
-                    <a>200,000+</a>
+                    <a>$0 - $75,000</a>
+                    <a>$75,000 - $90,000</a>
+                    <a>$90,000 - $100,000</a>
+                    <a>$100,000 - $200,000</a>
+                    <a>$200,000+</a>
                 </div>
             </div>
 
-            <button id="all" className="all" onClick={handleClick}>ALL JOBS</button>
+            <button id="all" className="all" onClick={handleClick}>All Jobs</button>
+            </div>
 
 
         </div>
