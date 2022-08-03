@@ -13,7 +13,7 @@ body {
 
   #myfavorites {
     position: relative;
-    left: 1000px;
+    left: 59%;
     width: 40px;
     height: 40px;
     top: -20px;
@@ -75,17 +75,23 @@ button:hover{
 
 #filtered {
   display: inline-block;
-  width: 600px;
+  width: 40%;
   height: 500px;
   position: relative;
   left: 35px;
-  top: 120px;
+  top: 20px;
   margin-left: 20px;
-  border-radius: 42px;
+  border-radius: 22px;
   background: rgb(237,237,237);
   background: linear-gradient(315deg, #e6e6e6, #ffffff);
   box-shadow:  -11px -11px 22px #d9d9d9,
                11px 11px 22px #ffffff;
+}
+
+h3 {
+  position: relative;
+  top: 15px;
+  left: 25px;
 }
 
 h5 {
@@ -96,85 +102,36 @@ h5 {
 #jobs {
   display: inline-block;
   margin-left: 40px;
-  width: 700px;
+  width: 48%;
   height: 500px;
   position: relative;
   left: 20px;
   bottom: 82px;
-  border-radius: 42px;
+  border-radius: 22px;
   background: linear-gradient(315deg, #e6e6e6, #ffffff);
 box-shadow:  -11px -11px 22px #d9d9d9,
              11px 11px 22px #ffffff;
 }
 
-.container input {
-  position: absolute;
-  opacity: 1;
-  -webkit-appearance: none;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  box-shadow: -1px -1px 8px rgba(255,255,255,0.5),
-  2px 2px 8px rgba(0,0,70,0.12);
-  border-radius: 50%;
-  border: 8px solid #ececec;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .5s;
-}
-
-.container {
-  display: flex;
+#favorite-me {
   position: relative;
-  top: 50px;
-  right: 20px;
-  justify-content: right;
-  align-items: center;
-}
-
-.container input::after {
-  transition: .5s;
-  font-family: monospace;
-  content: '';
-  color: #7a7a7a;
-  font-size: 25px;
-  left: 0.45em;
-  top: 0.25em;
-  width: 0.25em;
-  height: 0.5em;
-  border: solid #7a7a7a;
-  border-width: 0 0.15em 0.15em 0;
-  transform: rotate(45deg);
-}
-
-.container input:checked {
-  box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
-  10px 10px 15px rgba(70,70,70,0.12),
-  inset -10px -10px 15px rgba(255,255,255,0.5),
-  inset 10px 10px 15px rgba(70,70,70,0.12);
-  transition: .5s;
-}
-
-.container input:checked::after {
-  transition: .5s;
-  border: solid #15e38a;
-  border-width: 0 0.15em 0.15em 0;
-  transform: rotate(45deg);
+  margin-right: 5%;
+  width: 40px;
+  height: 40px;
+  top: 5%;
 }
 
 #searchName {
- border: none;
+  border: none;
   margin-left: 10px;
   margin-bottom: 15px;
- padding: 10px;
- width: 300px;
- border-radius: 1rem;
- background: linear-gradient(315deg, #e6e6e6, #ffffff);
-box-shadow:  -6px -6px 22px #d9d9d9,
-             6px 6px 22px #ffffff;
- transition: 0.3s;
+  padding: 10px;
+  width: 300px;
+  border-radius: 1rem;
+  background: linear-gradient(315deg, #e6e6e6, #ffffff);
+  box-shadow:  -6px -6px 22px #d9d9d9,
+              6px 6px 22px #ffffff;
+  transition: 0.3s;
 }
 
 .input:focus {
@@ -193,16 +150,18 @@ box-shadow:  -4px -4px 35px #b5c8bd,
 /*Filtered Jobs*/
 
 .ruby-jobs {
-  border-radius: 30px;
+  position: relative;
+  border-radius: 22px;
   margin: 0 auto;
   background: white;
-  width: 500px;
+  width: 90%;
   height: 200px;
 }
 
 p {
   position: relative;
-  max-width: 450px;
+  max-width: 90%;
+
   left: 25px;
   top: 10px;
 }

@@ -1,32 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
+import JobCard from './JobCard'
 
 
 
-function Job (){
+function Job ({display, setFavorites, search, setDisplay}){
  
- 
-    return(
-        <div id="block">
+  const [currentJob, setCurrentJob] = useState()
+    
+  const jobCard = display.map((job) => <JobCard 
+    job={job}
+    setCurrentJob={setCurrentJob}
+  />)
+
+  return(
+    <div id="block">
+
         <div id="filtered">
-          <h5>Filtered Jobs</h5>
-          <div class="ruby-jobs">
-              <h5>Job Title</h5>
-              <p>Job Description</p>
-              <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-              <p>Job Salary</p>
-          </div>
+          <h3>Filtered Jobs</h3>
+          {jobCard}
         </div>
+
         <div id="jobs">
-          
           <label class="container">
-          <input checked="checked" type="checkbox"></input>
-          <div class="checkmark"></div>
-      </label>
-          
+          </label>
+          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
         </div>
-        <div id="footer"></div>
-      </div>
-    )
+
+      <div id="footer"></div>
+    </div>
+  )
 
 } 
 export default Job
