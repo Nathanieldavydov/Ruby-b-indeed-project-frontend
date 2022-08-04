@@ -14,7 +14,7 @@ function App() {
   // every time we click on the little star in a job card, we will eventually push that one singular job onject 
   // to the Favorites table. This will fulfill one of the CURD requirements for the project
 
-  const [favorites, setFavorites] = useState({})
+  const [favorites, setFavorites] = useState(0)
 
 
   return (

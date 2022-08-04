@@ -4,27 +4,22 @@ import React from 'react'
 
 function Nav ({search, setSearch}){
    
-    function handleStyleChange(event){
-        const key = event.target.id
-        console.log(event.target.value)
-        setSearch({...search, [key]:event.target.value, all: false})
+    function handleStyleChange(event, key){
+        setSearch({...search, [key]:event.target.innerText, all: false})
     }
 
-    
-    function handleClick(event){
+    function handleAllClick(){
         setSearch({...search, all: true})
     }
 
-  
- 
     return(
        <div id="nav"> 
             <h3>Search for Jobs</h3>
             <input type="text" id="searchName" placeholder="Job title, keywords, or company" onChange={handleStyleChange}/>
             <div id="nav-buttons">
                 <div className="dropdown">
-                    <button id="city" className="dropbtn" onChange={handleStyleChange}>City</button>
-                    <div id="myDropdown" className="dropdown-content" >
+                    <button id="location" className="dropbtn" >Location</button>
+                    <div id="myDropdown" className="dropdown-content" onClick={(e) => handleStyleChange(e,'location')} >
                         <a>GA</a>
                         <a>MA</a>
                         <a>NC</a>
@@ -44,8 +39,17 @@ function Nav ({search, setSearch}){
                 </div>
 
 
-
                 <div className="dropdown">
+                    <button id="experience" className="dropbtn">Experience</button>
+                    <div id="myDropdown" className="dropdown-content" onClick={(e) => handleStyleChange(e,'experience')} >
+                        <a>Entry</a>
+                        <a>Mid</a>
+                        <a>Senior</a>
+                    </div>
+                </div>
+
+
+                {/* <div className="dropdown">
                     <button id="languages" className="dropbtn" onChange={handleStyleChange}>Languages</button>
                     <div id="myDropdown" className="dropdown-content" >
                         <a>C#</a>
@@ -57,12 +61,12 @@ function Nav ({search, setSearch}){
                         <a>Node</a>
                         <a>JavaScript</a>
                     </div>
-                </div>
+                </div> */}
 
     {/*Pin on company - maybe use full-time/part-time/contract*/}
                 <div className="dropdown">
-                    <button id="company" className="dropbtn" onChange={handleStyleChange}>Company</button>
-                    <div id="myDropdown" className="dropdown-content" >
+                    <button id="company" className="dropbtn">Company</button>
+                    <div id="myDropdown" className="dropdown-content" onClick={(e) => handleStyleChange(e,'company')} >
                         <a>Amazon</a>
                         <a>Apple</a>
                         <a>Google</a>
@@ -75,7 +79,7 @@ function Nav ({search, setSearch}){
                 </div>
 
     {/*Pin on Salary - depending on what we are looking for and some jobs dont have - maybe use entry level, not entry level */}
-
+{/* 
                 <div className="dropdown">
                     <button id="salary" className="dropbtn" onChange={handleStyleChange}>Salary</button>
                     <div id="myDropdown" className="dropdown-content" >
@@ -85,9 +89,9 @@ function Nav ({search, setSearch}){
                         <a>$100,000 - $200,000</a>
                         <a>$200,000+</a>
                     </div>
-                </div>
+                </div> */}
 
-                <button id="all" className="all" onClick={handleClick}>All Jobs</button>
+                <button id="all" className="all" onClick={handleAllClick}>All Jobs</button>
             </div>
 
 

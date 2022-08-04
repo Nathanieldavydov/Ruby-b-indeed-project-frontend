@@ -1,10 +1,19 @@
 import React/*, {useState}*/ from 'react'
+import FavoriteJobCard from './FavoriteJobCard'
 
 
 
 function Favorite ({favorites, setFavorites}){
     
-    // create 
+    const jobCard = favorites.map((job) => 
+    <FavoriteJobCard 
+      key = {job.id}
+      job={job}
+      setFavorites={setFavorites}
+    />)
+
+
+    // delete 
     function handleDeleteClick() {
         fetch(`from a json in a different file,`, {
         method: "DELETE",
@@ -14,24 +23,28 @@ function Favorite ({favorites, setFavorites}){
     }
 
     // post
-
+    //add favorite id to the other table .id
+    //
 
     // patch 
+
+    function handleComment(event, key){
+        setFavorites({...favorites, [key]:event.target.value, all: false})
+    }
      
     return(
         <div> 
             <div id="filtered">
-                <h5>Favorite Jobs</h5>
-                <button onClick={handleDeleteClick} class="fa-solid fa-trash-can"></button>
-                <div className="ruby-jobs">
-                    <h5>Job Title</h5>
-                    <p>Job Description</p>
-                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                    <p>Job Salary</p>
-                </div>
+                <h3>Favorite Jobs</h3>
+                <button onClick={handleDeleteClick} class="fa-solid fa-trash-can">Delete</button>
+                {jobCard}
             </div>
+            
+            <input type="text" id="favoriteComment" placeholder="Add your comment here" onChange={(e) => handleComment(e,'favoriteComment')}/>
         </div>
     )
 
 } 
 export default Favorite
+
+

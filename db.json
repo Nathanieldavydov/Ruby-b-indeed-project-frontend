@@ -1,0 +1,292 @@
+{ "dataset": [
+    {
+        "id": 1,
+        "name": "Software Engineer, Customer Trust",
+        "description": "Experience developing software and building services and automation at scale.It determines who we hire, how we work together, and how we make decisions.View all Netflix jobs in Remote - Remote jobsSalary Search: Software Engineer, Customer Trust salaries in RemoteSee popular questions & answers about Netflix",
+        "company_id": 1,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 1,
+            "name": "Netflix"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Embedded Software Engineer",
+        "description": "Embedded software: 5 years (Preferred).Do you find yourself involved in designing software or testing hardware issues?Pay: $75,000.00 - $93,000.00 per year.",
+        "company_id": 2,
+        "location_id": 2,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 2,
+            "name": "DISTek Integration, Inc."
+        },
+        "location": {
+            "id": 2,
+            "name": "IA"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Software Engineer",
+        "description": "As a software engineer, you will be responsible for building new tools that screen cases and prepare the required forms and supporting documents needed for a…View all Upsolve jobs in Remote - Remote jobsSalary Search: Software Engineer salaries in Remote",
+        "company_id": 3,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 3,
+            "name": "Upsolve"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Software Engineer",
+        "description": "Design and develop software modules to interface with advanced avionics hardware; integrate those software modules into a single OFP in support of modernization…View all CTSi jobs in Remote - Remote jobsSalary Search: Software Engineer salaries in Remote",
+        "company_id": 4,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 4,
+            "name": "CTSi"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Software Engineer (Entry Level - New College Grad)",
+        "description": "Back end logic responsible for coordinating multiple hardware systems and software services.We hire resourceful individuals with a passion for learning and an…View all Quartus Engineering jobs in San Diego, CA - San Diego jobsSalary Search: Software Engineer (Entry Level - New College Grad) salaries in San Diego, CA",
+        "company_id": 5,
+        "location_id": 3,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 5,
+            "name": "Quartus Engineering"
+        },
+        "location": {
+            "id": 3,
+            "name": "CA"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Software Developer",
+        "description": "Participates in the design and coding of software products.Troubleshoots problems and provides customer support for software operating system and application…View all Lakarya jobs in Remote - Remote jobsSalary Search: Software Developer salaries in Remote",
+        "company_id": 6,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 6,
+            "name": "Lakarya"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Software Engineer",
+        "description": "Must be very familiar with designing and implementing software using Object Oriented Design and Development Methodology.Paid holidays & paid time off.View all Kepion jobs in Seattle, WA - Seattle jobsSalary Search: Software Engineer salaries in Seattle, WA",
+        "company_id": 7,
+        "location_id": 4,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 7,
+            "name": "Kepion"
+        },
+        "location": {
+            "id": 4,
+            "name": "WA"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Software Engineer (New Graduate)",
+        "description": "We are big data domain experts [1, 2] with 15+ years of experience solving similar problems across Google, Hadapt, Vertica, Uber, Dropbox, Facebook, and Yahoo,…View all Bluesky Data jobs in Remote - Remote jobsSalary Search: Software Engineer (New Graduate) salaries in Remote",
+        "company_id": 8,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 8,
+            "name": "Bluesky Data"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Software Engineer",
+        "description": "We're on a mission to build the best platform in the world for engineers to understand and scale their systems, applications, and teams.View all Datadog jobs in New York, NY - New York jobsSalary Search: Software Engineer salaries in New York, NYSee popular questions & answers about Datadog",
+        "company_id": 9,
+        "location_id": 5,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 9,
+            "name": "Datadog"
+        },
+        "location": {
+            "id": 5,
+            "name": "NY"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Software Engineer",
+        "description": "If you are passionate about Republican and conservative politics, thrive in a startup environment, and have a knack for software development, then this is the…View all DirectSnd jobs in Remote - Remote jobsSalary Search: Software Engineer salaries in Remote",
+        "company_id": 10,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 10,
+            "name": "DirectSnd"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Software Engineer",
+        "description": "Solid OOP and software design knowledge – you should know how to create software that’s extensible, reusable and meets desired architectural objectives.View all Dynata jobs in Remote - Remote jobsSalary Search: Software Engineer salaries in RemoteSee popular questions & answers about Dynata",
+        "company_id": 11,
+        "location_id": 1,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 11,
+            "name": "Dynata"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 12,
+        "name": "New Graduate Software Engineer",
+        "description": "Have a strong technical foundation (CS and/or software engineering).Our platform enables organizations to license their providers in new states, verify…View all Medallion jobs in New York, NY - New York jobsSalary Search: New Graduate Software Engineer salaries in New York, NYSee popular questions & answers about Medallion",
+        "company_id": 12,
+        "location_id": 1,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 12,
+            "name": "Medallion"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Entry-Level Software Engineering Rotational Program - Remote",
+        "description": "Software Engineers utilize codes, algorithms, embedded systems, and architect software to optimize controller resources and throughput.View all General Motors jobs in Remote - Remote jobsSalary Search: Entry-Level Software Engineering Rotational Program - Remote salaries in RemoteSee popular questions & answers about General Motors",
+        "company_id": 13,
+        "location_id": 1,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 13,
+            "name": "General Motors"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Jr. Software Developer",
+        "description": "Students will be immersed in an Amazon team and gain real-life software development experience.Our full-time software developers are willing and able to mentor…View all Amazon.com Services LLC jobs in Irvine, CA - Irvine jobsSalary Search: Jr. Software Developer salaries in Irvine, CASee popular questions & answers about Amazon.com Services LLC",
+        "company_id": 14,
+        "location_id": 3,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 14,
+            "name": "Amazon.com Services LLC"
+        },
+        "location": {
+            "id": 3,
+            "name": "CA"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Junior Software Engineer",
+        "description": "We know the importance of staying at the cutting edge of technology, and value employees who strive to innovate and evolve with the changing technological…View all Argano jobs in Remote - Remote jobsSalary Search: Junior Software Engineer salaries in Remote",
+        "company_id": 15,
+        "location_id": 1,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 15,
+            "name": "Argano"
+        },
+        "location": {
+            "id": 1,
+            "name": "Remote"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Jr. Software Developer",
+        "description": "Our full-time software developers are willing and able to mentor exceptional student developers.Currently enrolled in a Bachelor's program in Computer Science…View all Amazon.com Services LLC jobs in Irvine, CA - Irvine jobsSalary Search: Jr. Software Developer salaries in Irvine, CASee popular questions & answers about Amazon.com Services LLC",
+        "company_id": 14,
+        "location_id": 3,
+        "experience": "Entry",
+        "jobType": "Full-time",
+        "company": {
+            "id": 14,
+            "name": "Amazon.com Services LLC"
+        },
+        "location": {
+            "id": 3,
+            "name": "CA"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Software Engineer, Security - University Graduate 2023",
+        "description": "Partner with software engineering teams to build threat models.Comfortable working in an agile team software development environment.View all Verkada jobs in San Mateo, CA - San Mateo jobsSalary Search: Software Engineer, Security - University Graduate 2023 salaries in San Mateo, CA",
+        "company_id": 16,
+        "location_id": 3,
+        "experience": "Mid",
+        "jobType": "Full-time",
+        "company": {
+            "id": 16,
+            "name": "Verkada"
+        },
+        "location": {
+            "id": 3,
+            "name": "CA"
+        }
+    }
+
+]}

@@ -7,14 +7,11 @@ import Nav from './Nav.js'
 function Search ({setFavorites}){
 
     const [search, setSearch]= useState({ 
-        searchName: null,
-        city: null,
-        languages: null,
+        location: null,
+        experience: null,
         company: null,
-        salary: null,
         all: true
     })
-
 
     const [display, setDisplay]= useState([]
     // Whatever we decide to scrape, we will get this from the backend, so we can wait for
@@ -23,10 +20,58 @@ function Search ({setFavorites}){
     
     useEffect(() => {
         // console.log("useEffect is starting")
-        fetch(`http://local.....?????`)
+        fetch(`http://localhost:3000/dataset`)
         .then(response => response.json())
-        .then((jobs) => setDisplay(jobs))
+        .then((jobs) => {
+            setDisplay(jobs.filter((displayedJobs)=> {
+                return (search.all 
+                    ?
+                    displayedJobs
+                    : 
+                    (search.location !== null
+                    ?
+                    displayedJobs.location.name.includes(search.location)
+                    :
+                    search.all)
+                    &&
+                    (search.company !== null
+                        ?
+                        displayedJobs.company.name.includes(search.company)
+                        :
+                        search.all
+                        )
+                    &&
+                    (
+                        search.experience !== null
+                        ?
+                        displayedJobs.experience.includes(search.experience)
+                        :
+                        search.all
+                    )
+                    // (
+                    //     if (search.location !== null){
+                    //         displayedJobs.location.includes(search.location)
+                    //     }
+                    //     if (search.company !== null){
+                    //         displayedJobs.company.includes(search.company)
+                    //     }
+                    //     if (search.experience !== null){
+                    //         displayedJobs.experience.includes(search.experience)
+                    //     }
+                    // )
+    
+                    )
+                })   
+            )
+        })
+
     },[])
+
+
+
+    
+
+
 
  
     return(

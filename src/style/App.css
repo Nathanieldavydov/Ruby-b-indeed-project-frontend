@@ -21,11 +21,7 @@ body {
   }
 
 
-/*
-h1 {
-    color: blue;    
-    }
-*/
+
 
 /*Button - main - these are for the buttons in the nav - Might have to be in the nav.css*/
 button {
@@ -71,6 +67,14 @@ button:hover{
             inset -4px -4px 11px #f0f0f0;
     color: white;
 }
+
+/* button::after{
+  border-radius: 30em;
+  background: #e0e0e0;
+  box-shadow: inset 4px 4px 11px #d0d0d0,
+          inset -4px -4px 11px #f0f0f0;
+  color: white;
+} */
 
 /* Jobs Container - both the filter and the jobs container is in here - We most likely have to make a new css fille (one for both of them and the link that sheet to both js files */
 

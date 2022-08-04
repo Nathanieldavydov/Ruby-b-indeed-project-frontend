@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function JobCard({job, setCurrentJob}){
+function FavoriteJobCard({job, setCurrentJob}){
 
     function handleShowJob(){
         setCurrentJob(job)
@@ -17,4 +17,4 @@ function JobCard({job, setCurrentJob}){
     )
 }
 
-export default JobCard
+export default FavoriteJobCard

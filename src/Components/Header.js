@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import bIndeed_logo from '../images/bIndeed_logo.png'
 
 

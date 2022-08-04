@@ -6,25 +6,29 @@ import JobDescription from './JobDescription'
 
 function Job ({display, setFavorites, search, setDisplay}){
  
-  const [currentJob, setCurrentJob] = useState()
+  const [currentJob, setCurrentJob] = useState(display[0])
     
-  const jobCard = display.map((job) => <JobCard 
+  const jobCard = display.map((job) => 
+  
+  <JobCard 
+    key = {job.id}
     job={job}
     setCurrentJob={setCurrentJob}
   />)
+
+  console.log(currentJob.name)
 
   return(
     <div id="block">
 
         <div id="filtered">
           <h3>Filtered Jobs</h3>
-          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
           {jobCard}
         </div>
 
         <div id="jobs">
           <label className="container">
-          <button id="favorite-me"><span className="fa fa-star"></span></button>
+          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
           </label>
           
         </div>
