@@ -6,9 +6,10 @@ body {
   /*Header - includes the button for the favorites and the logo - This might have to be in the Header.css file if we make it*/
 
   #logo {
-    max-width: 350px;
+    max-width: 400px;
     position: relative;
     top: 20px;
+    left: 1%;
     }
 
   #myfavorites {
@@ -16,7 +17,7 @@ body {
     left: 59%;
     width: 40px;
     height: 40px;
-    top: -20px;
+    top: 5%;
   }
 
 
@@ -79,7 +80,7 @@ button:hover{
   height: 500px;
   position: relative;
   left: 35px;
-  top: 20px;
+  top: 59px;
   margin-left: 20px;
   border-radius: 22px;
   background: rgb(237,237,237);
@@ -106,7 +107,6 @@ h5 {
   height: 500px;
   position: relative;
   left: 20px;
-  bottom: 82px;
   border-radius: 22px;
   background: linear-gradient(315deg, #e6e6e6, #ffffff);
 box-shadow:  -11px -11px 22px #d9d9d9,
@@ -145,6 +145,15 @@ box-shadow:  -4px -4px 35px #b5c8bd,
 .footer {
   width: 100%;
   height: 50px;
+  border: none;
+  
+}
+
+.footer2 {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #1C75BC;
 }
 
 /*Filtered Jobs*/

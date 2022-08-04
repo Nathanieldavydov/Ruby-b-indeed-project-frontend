@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import JobCard from './JobCard'
+import JobDescription from './JobDescription'
 
 
 
@@ -17,16 +18,19 @@ function Job ({display, setFavorites, search, setDisplay}){
 
         <div id="filtered">
           <h3>Filtered Jobs</h3>
+          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
           {jobCard}
         </div>
 
         <div id="jobs">
-          <label class="container">
+          <label className="container">
+          <button id="favorite-me"><span className="fa fa-star"></span></button>
           </label>
-          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
+          
         </div>
 
-      <div id="footer"></div>
+        <div className="footer"></div>
+        <div className="footer2"></div>
     </div>
   )
 

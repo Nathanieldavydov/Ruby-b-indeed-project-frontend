@@ -9,10 +9,10 @@ function JobCard({job, setCurrentJob}){
     }
 
     return(
-        <div class="ruby-jobs" onClick={handleShowJob}>
-            <h5>{jobTitle}</h5>
+        <div className="ruby-jobs" onClick={handleShowJob}>
+            {/*<h5>{jobTitle}</h5>
             <p>{jobSalary}</p>
-            <p>{jobCity}</p>
+    <p>{jobCity}</p>*/}
         </div>
     )
 }

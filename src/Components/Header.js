@@ -23,7 +23,7 @@ function Header (){
         <div id="header"> 
             {/* link this image in the header plz to */}
             <img src={bIndeed_logo} alt="bIndeed Logo" id="logo" onClick={handleHomeClick}/> 
-            <button id="myfavorites"><span class="fa fa-star" onClick={handleFavoritesClick}></span></button>
+            <button id="myfavorites"><span className="fa fa-star" onClick={handleFavoritesClick}></span></button>
 
          </div>
     )

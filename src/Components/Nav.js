@@ -25,25 +25,25 @@ function Nav ({search, setSearch}){
                 <div className="dropdown">
                     <button id="city" className="dropbtn" onChange={handleStyleChange}>City</button>
                     <div id="myDropdown" className="dropdown-content" >
-                        <a>Atlanta</a>
-                        <a>Boston</a>
-                        <a>Charlotte</a>
-                        <a>Chicago</a>
-                        <a>Dallas</a>
-                        <a>Denver</a>
+                        <a>GA</a>
+                        <a>MA</a>
+                        <a>NC</a>
+                        <a>IL</a>
+                        <a>TX</a>
+                        <a>CO</a>
                         <a>DC</a>
-                        <a>Houston</a>
-                        <a>Los Angeles</a>
-                        <a>Miami</a>
-                        <a>Nashville</a>
-                        <a>New York</a>
-                        <a>Oakland</a>
-                        <a>Portland</a>
-                        <a>Salt Lake City</a>
-                        <a>San Francisco</a>
-                        <a>Seattle</a>
+                        <a>CA</a>
+                        <a>FL</a>
+                        <a>TN</a>
+                        <a>NY</a>
+                        <a>OR</a>
+                        <a>UT</a>
+                        <a>WA</a>
+                        <a>Remote</a>
                     </div>
                 </div>
+
+
 
                 <div className="dropdown">
                     <button id="languages" className="dropbtn" onChange={handleStyleChange}>Languages</button>
@@ -59,6 +59,7 @@ function Nav ({search, setSearch}){
                     </div>
                 </div>
 
+    {/*Pin on company - maybe use full-time/part-time/contract*/}
                 <div className="dropdown">
                     <button id="company" className="dropbtn" onChange={handleStyleChange}>Company</button>
                     <div id="myDropdown" className="dropdown-content" >
@@ -73,6 +74,7 @@ function Nav ({search, setSearch}){
                     </div>
                 </div>
 
+    {/*Pin on Salary - depending on what we are looking for and some jobs dont have - maybe use entry level, not entry level */}
 
                 <div className="dropdown">
                     <button id="salary" className="dropbtn" onChange={handleStyleChange}>Salary</button>
