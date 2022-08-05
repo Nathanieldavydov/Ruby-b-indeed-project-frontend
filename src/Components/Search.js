@@ -1,146 +1,106 @@
 import React, {useState ,useEffect} from 'react'
 import Job from './Job.js'
-import Nav from './Nav.js'
+
+function Search ({listings}){
+
+    const [searchedLocation, setSearchedLocation] = useState("All")
+    const [searchedCompany, setSearchedCompany] = useState("All")
+    const [searchedExperience, setSearchedExperience] = useState("All") 
+    const [searched, setSearched] = useState("")
 
 
 
-function Search ({setFavorites}){
-
-    const [searchedLocation, setSearchedLocation] = useState("")
-    const [searchedCompany, setSearchedCompany] = useState("")
-    const [searchedExperience, setSearchedExperience] = useState("") 
-
-
-    // const [search, setSearch]= useState({ 
-    //     location: null,
-    //     experience: null,
-    //     company: null,
-    //     all: true
-    // })
-
-    // const [display, setDisplay]= useState([]
-    // // Whatever we decide to scrape, we will get this from the backend, so we can wait for
-    // // that info when we get it!
-    // )
-    
-    // useEffect(() => {
-    //     // console.log("useEffect is starting")
-    //     fetch(`http://localhost:9292/listings`)
-    //     .then(response => response.json())
-    //     .then((jobs) => {
-    //         setDisplay(jobs.filter((displayedJobs)=> {
-    //             return (search.all 
-    //                 ?
-    //                 displayedJobs
-    //                 : 
-    //                 (search.location !== null
-    //                 ?
-    //                 displayedJobs.location.name.includes(search.location)
-    //                 :
-    //                 search.all)
-    //                 &&
-    //                 (search.company !== null
-    //                     ?
-    //                     displayedJobs.company.name.includes(search.company)
-    //                     :
-    //                     search.all
-    //                     )
-    //                 &&
-    //                 (
-    //                     search.experience !== null
-    //                     ?
-    //                     displayedJobs.experience.includes(search.experience)
-    //                     :
-    //                     search.all
-    //                 )
-    //                 // (
-    //                 //     if (search.location !== null){
-    //                 //         displayedJobs.location.includes(search.location)
-    //                 //     }
-    //                 //     if (search.company !== null){
-    //                 //         displayedJobs.company.includes(search.company)
-    //                 //     }
-    //                 //     if (search.experience !== null){
-    //                 //         displayedJobs.experience.includes(search.experience)
-    //                 //     }
-    //                 // )
-    
-    //                 )
-    //             })   
-    //         )
-    //     })
-
-    // const [display, setDisplay]= useState([{}])
-    
-    // useEffect(() => {
-    //     console.log("useEffect is starting")
-    //     fetch(`http://localhost:9292/listings`)
-    //     .then(response => response.json())
-    //     .then((searchedJobs) => {
-    //         let jobs = []
-    //         searchedJobs.forEach(element => {
-    //             jobs.push(element)
-    //         });
-
-    //         setDisplay(jobs)
-
-    //         // setDisplay(jobs.filter((displayedJobs)=> {
-    //         //     return (search.all 
-    //         //         ?
-    //         //         displayedJobs
-    //         //         : 
-    //         //         (search.location !== null
-    //         //         ?
-    //         //         displayedJobs.location.name.includes(search.location)
-    //         //         :
-    //         //         search.all)
-    //         //         &&
-    //         //         (search.company !== null
-    //         //             ?
-    //         //             displayedJobs.company.name.includes(search.company)
-    //         //             :
-    //         //             search.all
-    //         //             )
-    //         //         &&
-    //         //         (
-    //         //             search.experience !== null
-    //         //             ?
-    //         //             displayedJobs.experience.includes(search.experience)
-    //         //             :
-    //         //             search.all
-    //         //         )
-    //                 // (
-    //                 //     if (search.location !== null){
-    //                 //         displayedJobs.location.includes(search.location)
-    //                 //     }
-    //                 //     if (search.company !== null){
-    //                 //         displayedJobs.company.includes(search.company)
-    //                 //     }
-    //                 //     if (search.experience !== null){
-    //                 //         displayedJobs.experience.includes(search.experience)
-    //                 //     }
-    //                 // )
-    
-    //                 //)
-    //             //})   
-    //         //)
-    //     })
-
-    // },[])
+    useEffect( () => {
+        fetch(`http://localhost:9292/locations`)
+        .then(res => res.json())
+        .then((data) => renderLocations(data))
+    },[])
 
 
+    useEffect( () => {
+        fetch(`http://localhost:9292/companies`)
+        .then(res => res.json())
+        .then((data) => renderCompanies(data))
+    },[])
 
-    
+
+    function renderCompanies(companyData){
+        var select = document.getElementById("myDropdown3")
+        select.innerHTML = ""
+        companyData.forEach(company => {
+            var option = company.name
+            var el = document.createElement("a")
+            el.textContent = option 
+            el.value = option
+            select.append(el)
+        })
+    }
+
+    function renderLocations(locationData){
+        var select = document.getElementById("myDropdown1")
+        select.innerHTML = ""
+        locationData.forEach(location => {
+            var option = location.name 
+            var el = document.createElement("a")
+            el.textContent = option
+            el.value = option
+            select.append(el)
+        });
+    }
 
 
+    function handleLocationClick(e){
+        setSearchedLocation(e.target.value)
+    }
 
- 
+    function handleExperienceClick(e){
+        setSearchedExperience(e.target.innerText)
+    }
+
+    function handleCompanyClick(e){
+        setSearchedCompany(e.target.value)
+    }
+
+    function handleAllClick(e){
+        setSearchedCompany("All")
+        setSearchedExperience("All")
+        setSearchedLocation("All")
+    }
+
+    function handleSearchChange(e){
+        setSearched(e.target.value)
+    }
+
     return(
-       <div> 
-            {/* <Nav search = {search} setSearch={setSearch}/> */}
-            {/* <Job display={display} setFavorites={setFavorites} search={search} setDisplay={setDisplay}/> */}
-        </div>
-    )
+        <div id="nav"> 
+            <h3>Search for Jobs</h3>
+            <input type="text" id="searchName" placeholder="Job title, keywords, or company" onChange={handleSearchChange}/>
 
+            <div id="nav-buttons">
+                <div className="dropdown">
+                    <button id="location" className="dropbtn" >Location</button>
+                    <div id="myDropdown1" className="dropdown-content" onClick={(e) => handleLocationClick(e)}/>
+                </div>
+
+                <div className="dropdown">
+                    <button id="experience" className="dropbtn">Experience</button>
+                        <div id="myDropdown2" className="dropdown-content" onClick={(e) => handleExperienceClick(e)}>
+                            <a>Entry</a>
+                            <a>Mid</a>
+                            <a>Senior</a>
+                        </div>
+                </div>
+
+                <div className="dropdown">
+                    <button id="company" className="dropbtn">Company</button>
+                        <div id="myDropdown3" className="dropdown-content" onClick={(e) => handleCompanyClick(e)} />
+                </div>
+
+
+                <button id="all" className="all" onClick={handleAllClick}>All Jobs</button>
+            </div>
+            <Job listings = {listings} searched = {searched} location = {searchedLocation} company = {searchedCompany} experience = {searchedExperience} />
+        </div>
+     )
 }
 export default Search

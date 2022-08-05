@@ -13,7 +13,6 @@ function JobDescription({currentJob, setFavorite}){
             <h5>{currentJob.name}</h5>
             <button id="favorite-me"><span className="fa fa-star" onClick={handleAddFavorite}></span></button>
             {/* we need to do some css here where if we click it, it will stay colored */}
-            
             <p>{currentJob.name}</p>
             <p><strong>{currentJob.location.name}</strong></p>
             <p>{currentJob.company.name}</p>

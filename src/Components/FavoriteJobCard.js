@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function FavoriteJobCard({job}){
+function FavoriteJobCard({job, setCurrentJob}){
 
     function handleShowJob(){
         setCurrentJob(job)

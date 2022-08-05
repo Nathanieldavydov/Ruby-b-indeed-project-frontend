@@ -1,9 +1,9 @@
-import React/*, {useEffect}*/ from 'react'
+import React, {useEffect} from 'react'
 import FavoriteJobCard from './FavoriteJobCard'
 
 
 
-function Favorite ({favorite}){
+function Favorite ({favorite, jobCard}){
     
     
     useEffect(() => {
