@@ -8,7 +8,6 @@ function JobDescription({currentJob, setFavorite}){
             method: 'PATCH'
         })
     }
-
  
     return(
         <div class="ruby-job">

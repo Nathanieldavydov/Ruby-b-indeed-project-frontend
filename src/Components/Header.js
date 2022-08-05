@@ -10,6 +10,7 @@ function Header (){
 
     function handleFavoritesClick(event){
         navigate('./favorites');
+        console.log('you clicked favorites')
     }
 
     function handleHomeClick(event){
@@ -20,7 +21,7 @@ function Header (){
  
     return(
         <div id="header"> 
-            {/* link this image in the header plz to */}
+
             <img src={bIndeed_logo} alt="bIndeed Logo" id="logo" onClick={handleHomeClick}/> 
             <button id="myfavorites"><span className="fa fa-star" onClick={handleFavoritesClick}></span></button>
 

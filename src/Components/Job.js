@@ -11,21 +11,8 @@ import JobDescription from './JobDescription'
 
 function Job ({listings, searched, location, company, experience}){
   const [currentJob, setCurrentJob] = useState({
-    "id": 16,
-    "name": "Jr. Software Developer",
-    "description": "Our full-time software developers are willing and able to mentor exceptional student developers.Currently enrolled in a Bachelor's program in Computer Science…View all Amazon.com Services LLC jobs in Irvine, CA - Irvine jobsSalary Search: Jr. Software Developer salaries in Irvine, CASee popular questions & answers about Amazon.com Services LLC",
-    "company_id": 14,
-    "location_id": 3,
-    "experience": "Entry",
-    "jobType": "Full-time",
-    "company": {
-        "id": 14,
-        "name": "Amazon.com Services LLC"
-    },
-    "location": {
-        "id": 3,
-        "name": "CA"
-    }
+    "company": {},
+    "location": {}
 })
 
 
@@ -70,21 +57,6 @@ function Job ({listings, searched, location, company, experience}){
           <JobDescription currentJob={currentJob}/>
         </label>
       </div>
-
-
-
-
-      <div className="footer"></div>
-      <div className="footer2"></div>
-{/* 
-
-        <div id="jobs">
-          <label className="container">
-          <JobDescription currentJob={currentJob} setFavorite={setFavorite}/>
-          </label>
-          
-        </div>
- */}
     </div>
   )
 
