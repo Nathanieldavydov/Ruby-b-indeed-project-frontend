@@ -9,7 +9,7 @@ import JobDescription from './JobDescription'
 
 //to determine what to display
 
-function Job ({listings, searched, location, company, experience}){
+function Job ({listings, searched, location, company, experience, favorites, setFavorites}){
   const [currentJob, setCurrentJob] = useState({
     "company": {},
     "location": {}
@@ -47,16 +47,19 @@ function Job ({listings, searched, location, company, experience}){
 
   return(
     <div id="block">
-      <div id = "filtered">
-        <h3>Filtered Jobs</h3>
-          {jobCards}
-      </div>
+          <div id = "filtered">
+            <h3>Filtered Jobs</h3>
+            <div className='job-container'>
+              {jobCards}
+            </div>
 
-      <div id = "jobs">
-        <label className = "container">
-          <JobDescription currentJob={currentJob}/>
-        </label>
-      </div>
+          </div>
+
+          <div id = "jobs">
+            <label className = "container">
+              <JobDescription currentJob={currentJob} favorites={favorites} setFavorites={setFavorites}/>
+            </label>
+          </div>
     </div>
   )
 

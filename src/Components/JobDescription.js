@@ -1,24 +1,42 @@
-import React , { useEffect } from 'react'
+import React from 'react'
 
-function JobDescription({currentJob, setFavorite}){
+function JobDescription({currentJob, favorites, setFavorites}){
 
     function handleAddFavorite(){
-        // this may not work, you need to update the array
+        console.log(`you are patching `)
         fetch(`http://localhost:9292/favorites/${currentJob.id}`,{
             method: 'PATCH'
         })
+        .then(res => res.json())
+        .then(data => setFavorites([...favorites, data]))
     }
- 
+
+
+    
+    
+    let hash = {}
+
+    favorites.forEach( favorite => {
+        hash[favorite.id] = favorite.listing_id
+    })
+
+
+   const buttonDisplay = currentJob.id in hash ? "favorite-me-active" : "favorite-me"
+
+    
     return(
         <div class="ruby-job">
-            <h5>{currentJob.name}</h5>
-            <button id="favorite-me"><span className="fa fa-star" onClick={handleAddFavorite}></span></button>
-            {/* we need to do some css here where if we click it, it will stay colored */}
+            <br/>
+            <button id={buttonDisplay}><span className="fa fa-star" onClick={handleAddFavorite}></span></button>
+            <h3>{currentJob.name}</h3>
             <p>{currentJob.name}</p>
             <p><strong>{currentJob.location.name}</strong></p>
             <p>{currentJob.company.name}</p>
             <p>{currentJob.description}</p>
-            <button /*href={`${currentJob.url}`}*/>Apply</button>
+            <br/>
+            <a href={`${currentJob.url}`} target = "_blank">
+                <button >Apply</button>
+            </a>
         </div>
     )
 }

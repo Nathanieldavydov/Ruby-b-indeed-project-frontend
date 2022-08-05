@@ -1,0 +1,80 @@
+/* Jobs Container - both the filter and the jobs container is in here - We most likely have to make a new css fille (one for both of them and the link that sheet to both js files */
+
+#block{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    width: 99%;
+}
+
+#filtered {
+    display: inline-block;
+    width: 40%;
+    height: 500px;
+    position: relative;
+    left: 35px;
+    margin-left: 20px;
+    border-radius: 22px;
+    background: rgb(237,237,237);
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    box-shadow:  -11px -11px 22px #d9d9d9,
+                 11px 11px 22px #ffffff;
+    max-height: 90%;
+    overflow-x: hidden;
+  }
+  
+
+  #jobs {
+    display: inline-block;
+    width: 48%;
+    margin-left: 40px;
+    height: 500px;
+    position: relative;
+    left: 20px;
+    border-radius: 22px;
+    background: linear-gradient(315deg, #e6e6e6, #ffffff);
+    box-shadow:  -11px -11px 22px #d9d9d9,
+               11px 11px 22px #ffffff;
+  }
+  
+  #favorite-me {
+    position: relative;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+    top: 5%;
+  }
+
+  #favorite-me-active {
+    background: #1C75BC;
+    position: relative;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+    top: 5%;
+  }
+
+  .ruby-jobs {
+    position: relative;
+    margin-top: 10px;
+    border-radius: 22px;
+    margin: 0 auto;
+    background: white;
+    width: 90%;
+    height: 200px;
+  }
+  
+  .card-description{
+    overflow-x: hidden;
+  }
+
+
+
+  .ruby-job {
+    position: relative;
+    line-height: 22px;
+    margin-top: 15%;
+    margin: 0 auto;
+    width: 90%;
+  }

@@ -3,7 +3,7 @@ import FavoriteJobCard from './FavoriteJobCard'
 
 
 
-function FavoriteJobContainer({favorites, listings}){
+function FavoriteJobContainer({favorites, listings, setFavorites}){
     let hash = {}
 
     favorites.forEach( favorite => {
@@ -19,7 +19,7 @@ function FavoriteJobContainer({favorites, listings}){
     })
 
 
-    const mappedFavorites = mappedListings.map(favorite => <FavoriteJobCard key = {favorite.id} favorite = {favorite}/>)
+    const mappedFavorites = mappedListings.map(favorite => <FavoriteJobCard key = {favorite.id} favorite = {favorite} favorites={favorites} setFavorites={setFavorites}/>)
 
 
     return(

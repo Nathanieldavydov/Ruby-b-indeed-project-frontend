@@ -1,7 +1,7 @@
 import React, {useState ,useEffect} from 'react'
 import Job from './Job.js'
 
-function Search ({listings}){
+function Search ({listings, favorites, setFavorites}){
 
     const [searchedLocation, setSearchedLocation] = useState("All")
     const [searchedCompany, setSearchedCompany] = useState("All")
@@ -72,35 +72,50 @@ function Search ({listings}){
     }
 
     return(
-        <div id="nav"> 
-            <h3>Search for Jobs</h3>
-            <input type="text" id="searchName" placeholder="Job title, keywords, or company" onChange={handleSearchChange}/>
+        <div>
+            <div id="nav"> 
+                <h3>Search for Jobs</h3>
+                <input type="text" id="searchName" placeholder="Job title, keywords, or company" onChange={handleSearchChange}/>
 
-            <div id="nav-buttons">
-                <div className="dropdown">
-                    <button id="location" className="dropbtn" >Location</button>
-                    <div id="myDropdown1" className="dropdown-content" onClick={(e) => handleLocationClick(e)}/>
+                <div id="nav-buttons">
+                    <div className="dropdown">
+                        <button id="location" className="dropbtn" >Location</button>
+                        <div id="myDropdown1" className="dropdown-content" onClick={(e) => handleLocationClick(e)}/>
+                    </div>
+
+                    <div className="dropdown">
+                        <button id="experience" className="dropbtn">Experience</button>
+                            <div id="myDropdown2" className="dropdown-content" onClick={(e) => handleExperienceClick(e)}>
+                                <a>Entry</a>
+                                <a>Mid</a>
+                                <a>Senior</a>
+                            </div>
+                    </div>
+
+                    <div className="dropdown">
+                        <button id="company" className="dropbtn">Company</button>
+                            <div id="myDropdown3" className="dropdown-content" onClick={(e) => handleCompanyClick(e)} />
+                    </div>
+
+
+                    <button id="all" className="all" onClick={handleAllClick}>All Jobs</button>
                 </div>
-
-                <div className="dropdown">
-                    <button id="experience" className="dropbtn">Experience</button>
-                        <div id="myDropdown2" className="dropdown-content" onClick={(e) => handleExperienceClick(e)}>
-                            <a>Entry</a>
-                            <a>Mid</a>
-                            <a>Senior</a>
-                        </div>
-                </div>
-
-                <div className="dropdown">
-                    <button id="company" className="dropbtn">Company</button>
-                        <div id="myDropdown3" className="dropdown-content" onClick={(e) => handleCompanyClick(e)} />
-                </div>
-
-
-                <button id="all" className="all" onClick={handleAllClick}>All Jobs</button>
             </div>
-            <Job listings = {listings} searched = {searched} location = {searchedLocation} company = {searchedCompany} experience = {searchedExperience} />
+           
+    
+             <Job 
+                listings = {listings} 
+                searched = {searched} 
+                location = {searchedLocation} 
+                company = {searchedCompany} 
+                experience = {searchedExperience} 
+                favorites = {favorites}
+                setFavorites = {setFavorites}
+             />
+
+
         </div>
+        
      )
 }
 export default Search
