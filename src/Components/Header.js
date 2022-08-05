@@ -10,6 +10,8 @@ function Header (){
 
     function handleFavoritesClick(event){
         navigate('./favorites');
+        console.log("you clicked favorites!")
+
     }
 
     function handleHomeClick(event){
