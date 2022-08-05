@@ -1,10 +1,10 @@
 import React from 'react'
 
-function JobDescription({currentJob, setFavorites}){
+function JobDescription({currentJob, setFavorite}){
 
     function handleAddFavorite(){
         // this may not work, you need to update the array
-        setFavorites(currentJob.id)
+        setFavorite(currentJob.id)
     }
 
  

@@ -14,7 +14,7 @@ function App() {
   // every time we click on the little star in a job card, we will eventually push that one singular job onject 
   // to the Favorites table. This will fulfill one of the CURD requirements for the project
 
-  const [favorites, setFavorites] = useState(0)
+  const [favorite, setFavorite] = useState(0)
 
 
   return (
@@ -22,8 +22,8 @@ function App() {
 
      <Header/>
      <Routes >       
-        <Route path="/" element={<Search setFavorites={setFavorites}/>}/>
-        <Route path="/favorites" element={<Favorite favorites={favorites} setFavorites={setFavorites} />}/>
+        <Route path="/" element={<Search setFavorite={setFavorite}/>}/>
+        <Route path="/favorites" element={<Favorite favorite={favorite} />}/>
      </Routes >       
     </BrowserRouter>
   );
