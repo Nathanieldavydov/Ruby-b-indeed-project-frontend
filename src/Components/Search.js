@@ -20,7 +20,7 @@ function Search ({setFavorites}){
     
     useEffect(() => {
         // console.log("useEffect is starting")
-        fetch(`http://localhost:3000/dataset`)
+        fetch(`http://localhost:9292/listings`)
         .then(response => response.json())
         .then((jobs) => {
             setDisplay(jobs.filter((displayedJobs)=> {

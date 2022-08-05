@@ -4,7 +4,7 @@ import JobDescription from './JobDescription'
 
 
 
-function Job ({display, setFavorites, search, setDisplay}){
+function Job ({display, setFavorite, search, setDisplay}){
  
   const [currentJob, setCurrentJob] = useState(display[0])
     
@@ -16,7 +16,6 @@ function Job ({display, setFavorites, search, setDisplay}){
     setCurrentJob={setCurrentJob}
   />)
 
-  console.log(currentJob.name)
 
   return(
     <div id="block">
@@ -28,7 +27,7 @@ function Job ({display, setFavorites, search, setDisplay}){
 
         <div id="jobs">
           <label className="container">
-          <JobDescription currentJob={currentJob} setFavorites={setFavorites}/>
+          <JobDescription currentJob={currentJob} setFavorite={setFavorite}/>
           </label>
           
         </div>
