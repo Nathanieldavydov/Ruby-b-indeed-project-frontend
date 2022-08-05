@@ -16,7 +16,6 @@ function Job ({display, setFavorites, search, setDisplay}){
     setCurrentJob={setCurrentJob}
   />)
 
-  console.log(currentJob.name)
 
   return(
     <div id="block">
