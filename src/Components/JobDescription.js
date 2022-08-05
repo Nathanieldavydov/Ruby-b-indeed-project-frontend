@@ -1,10 +1,12 @@
-import React from 'react'
+import React , { useEffect } from 'react'
 
 function JobDescription({currentJob, setFavorite}){
 
     function handleAddFavorite(){
         // this may not work, you need to update the array
-        setFavorite(currentJob.id)
+        fetch(`http://localhost:9292/favorites/${currentJob.id}`,{
+            method: 'PATCH'
+        })
     }
 
  

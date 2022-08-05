@@ -2,17 +2,15 @@ import React from 'react'
 
 
 
-function FavoriteJobCard({job, setCurrentJob}){
+function FavoriteJobCard({favorite}){
+    console.log(favorite.url)
 
-    function handleShowJob(){
-        setCurrentJob(job)
-    }
 
     return(
-        <div className="ruby-jobs" onClick={handleShowJob}>
-            <h5>{job.name}</h5>
-            <p>{job.description}</p>
-            <p>{job.company.name}</p> 
+        <div className="ruby-jobs">
+            <h5>{favorite.name}</h5>
+            <p>{favorite.description}</p>
+            <p>{favorite.company.name}</p> 
         </div>
     )
 }

@@ -13,6 +13,7 @@ function JobCard({job, setCurrentJob}){
             <h5>{job.name}</h5>
             <p>{job.description}</p>
             <p>{job.company.name}</p> 
+            <button onClick={`${job.url}`}>Apply</button>
         </div>
     )
 }

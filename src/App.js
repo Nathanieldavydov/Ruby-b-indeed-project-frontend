@@ -28,7 +28,7 @@ function App() {
      <Header/>
      <Routes >       
         <Route path="/" element={<Search listings = {jobs}/>}/>
-        <Route path="/favorites" element={<Favorite favorite={favorite} />}/>
+        <Route path="/favorites" element={<Favorite listings = {jobs}/>}/>
      </Routes >       
     </BrowserRouter>
   );
